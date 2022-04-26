@@ -26,7 +26,7 @@ namespace Assignment2
             //adapterMain.Run();
             //Console.WriteLine();
 
-            Console.WriteLine("State Command Memento");
+            Console.WriteLine("State Command Memento");   // Funkar
             SCMMain scmMain = new();
             scmMain.Run();
         }

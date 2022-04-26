@@ -1,14 +1,21 @@
-﻿namespace Assignment2.StateCommandMemento.CommandPattern
+﻿using System;
+
+namespace Assignment2.StateCommandMemento.CommandPattern
 {
-    public class MachineCommand
+    public class MachineCommand : ICommand
     {
-        public Machine.Machine Machine { get; set; }
+        public Machine.PrintMachine Machine { get; set; }
         public string Text { get; set; }
 
-        public MachineCommand(Machine.Machine machine, string text)
+        public MachineCommand(Machine.PrintMachine machine, string text)
         {
             Machine = machine;
             Text = text;
+        }
+
+        public void PrintWord()
+        {
+            Machine.Print(Text);
         }
     }
 }
